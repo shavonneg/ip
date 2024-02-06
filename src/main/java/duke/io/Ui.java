@@ -1,7 +1,8 @@
 package duke.io;
-import duke.task.Task;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import duke.task.Task;
 
 /**
  * Ui - Handles interactions with the user, including input and output.
@@ -50,8 +51,6 @@ public class Ui {
 
     /**
      * Retrieves user input from the console.
-     *
-     * @return The user's input as a String.
      */
     public static void showTaskList(ArrayList<Task> tasks) {
         System.out.println("These are your to-dos: ");

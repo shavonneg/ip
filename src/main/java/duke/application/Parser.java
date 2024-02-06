@@ -1,13 +1,15 @@
 package duke.application;
-import duke.task.Deadline;
-import duke.task.Event;
-import duke.io.Storage;
-import duke.task.Task;
-import duke.task.Todo;
-import duke.io.Ui;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+
+import duke.io.Storage;
+import duke.io.Ui;
+import duke.task.Deadline;
+import duke.task.Event;
+import duke.task.Task;
+import duke.task.Todo;
+
 
 
 /**
@@ -150,8 +152,7 @@ public class Parser {
             }
             System.out.println("Now you have " + taskList.getTotalTasks() + " tasks in your list.");
             Ui.printLine();
-        }
-        else {
+        } else {
             System.out.println("Invalid input format for deadline. Please provide a valid date/time.");
         }
     }
@@ -209,6 +210,17 @@ public class Parser {
         }
     }
 
+    /**
+     * Finds tasks containing a specified keyword and displays matching tasks.
+     *
+     * Search through task descriptions in the provided TaskList for occurrences of the
+     * specified keyword. It then prints the matching tasks to the console.
+     * If no matches are found, a message indicating the absence of
+     * matching tasks is displayed.
+     *
+     * @param input   The user input string specifying the search operation.
+     * @param tasks   The TaskList containing tasks to search through.
+     */
     public void findItems(String input, TaskList tasks) {
         Ui.showFindItemList(input);
         boolean found = false;
